@@ -1,30 +1,61 @@
 {% extends "base.html" %} {% block content %}
 
-<h2>Image Classifier</h2>
-
 <div>
-    <form id="upload-file" method="post" enctype="multipart/form-data">
-        <label for="imageUpload" class="upload-label">
-            Choose...
-        </label>
-        <input type="file" name="file" id="imageUpload" accept=".png, .jpg, .jpeg">
-    </form>
+    <h2 style="text-align: center;">Image Classifier</h2>
+    <br>
+    <br>
+    <h4 style="text-align: center;">Browse Image to Classify:</h4>
+    <br>
 
-    <div class="image-section" style="display:none;">
-        <div class="img-preview">
-            <div id="imagePreview">
+    <div>
+        <form style="text-align: center;" id="upload-file" method="post" enctype="multipart/form-data">
+            <label for="imageUpload" class="upload-label">
+                Choose...
+            </label>
+            <input type="file" name="file" id="imageUpload" accept=".png, .jpg, .jpeg">
+        </form>
+
+        <div class="image-section" style="display:none;">
+            <div class="img-preview">
+                <div id="imagePreview">
+                </div>
+            </div>
+            <div>
+                <button type="button" class="btn btn-primary btn-lg " id="btn-predict">Predict!</button>
             </div>
         </div>
-        <div>
-            <button type="button" class="btn btn-primary btn-lg " id="btn-predict">Predict!</button>
+
+        <div class="loader" style="display:none;"></div>
+
+        <h3 id="result">
+            <span> </span>
+        </h3>
+
+        <div class="footer">
+            <style>
+                .heart {
+                    color: #e25555;
+                }
+
+                .footer {
+                    position: fixed;
+                    left: 0;
+                    bottom: 0;
+                    width: 100%;
+                    background-color: cyan;
+                    text-align: center;
+                    background-position: bottom;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                }
+
+                a {
+                    color: rgb(71, 4, 133);
+                }
+            </style>
+            Made with <span class="heart">❤</span> by <a href="https://aniketpathak.live"><b>Aniket Pathak</b></a>
         </div>
     </div>
-
-    <div class="loader" style="display:none;"></div>
-
-    <h3 id="result">
-        <span> </span>
-    </h3>
 
 </div>
 
