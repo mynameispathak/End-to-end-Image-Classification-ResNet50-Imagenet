@@ -1,8 +1,7 @@
 {% extends "base.html" %} {% block content %}
 
 <div>
-    <h2 style="text-align: center;">Image Classifier</h2>
-    <br>
+    <h2 style="text-align: center;">Image Classification using ResNet50</h2>
     <br>
     <h4 style="text-align: center;">Browse Image to Classify:</h4>
     <br>
@@ -16,18 +15,18 @@
         </form>
 
         <div class="image-section" style="display:none;">
-            <div class="img-preview">
+            <div class="img-preview" style="display: block; margin-left: auto; margin-right: auto; width: 40%;">
                 <div id="imagePreview">
                 </div>
             </div>
-            <div>
+            <div style="margin: auto; width: 50%;text-align: center;">
                 <button type="button" class="btn btn-primary btn-lg " id="btn-predict">Predict!</button>
             </div>
         </div>
 
         <div class="loader" style="display:none;"></div>
 
-        <h3 id="result">
+        <h3 id="result" style="text-align: center;">
             <span> </span>
         </h3>
 
